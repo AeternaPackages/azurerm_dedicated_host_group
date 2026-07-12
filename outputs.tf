@@ -1,4 +1,9 @@
 # --- azurerm_dedicated_host_group ---
+output "dedicated_host_groups_id" {
+  description = "Map of id values across all dedicated_host_groups, keyed the same as var.dedicated_host_groups"
+  value       = module.dedicated_host_groups.dedicated_host_groups_id
+}
+
 output "dedicated_host_groups_automatic_placement_enabled" {
   description = "Map of automatic_placement_enabled values across all dedicated_host_groups, keyed the same as var.dedicated_host_groups"
   value       = module.dedicated_host_groups.dedicated_host_groups_automatic_placement_enabled
@@ -35,6 +40,11 @@ output "dedicated_host_groups_zone" {
 }
 
 # --- azurerm_dedicated_host ---
+output "dedicated_hosts_id" {
+  description = "Map of id values across all dedicated_hosts, keyed the same as var.dedicated_hosts"
+  value       = module.dedicated_hosts.dedicated_hosts_id
+}
+
 output "dedicated_hosts_auto_replace_on_failure" {
   description = "Map of auto_replace_on_failure values across all dedicated_hosts, keyed the same as var.dedicated_hosts"
   value       = module.dedicated_hosts.dedicated_hosts_auto_replace_on_failure
