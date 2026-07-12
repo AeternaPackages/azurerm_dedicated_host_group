@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.dedicated_host_groups : {
       for k2, v2 in coalesce(v1.dedicated_hosts, {}) :
       "${k1}/${k2}" => merge(v2, {
-        dedicated_host_group_id = module.dedicated_host_groups.dedicated_host_groups["${k1}"].id
+        dedicated_host_group_id = module.dedicated_host_groups.dedicated_host_groups_id["${k1}"]
       })
     }
   ]...)
