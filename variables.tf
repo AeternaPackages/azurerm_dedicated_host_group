@@ -27,7 +27,7 @@ EOT
     name                        = string
     platform_fault_domain_count = number
     resource_group_name         = string
-    automatic_placement_enabled = optional(bool) # Default: false
+    automatic_placement_enabled = optional(bool)
     tags                        = optional(map(string))
     zone                        = optional(string)
     dedicated_hosts = optional(map(object({
@@ -35,8 +35,8 @@ EOT
       name                    = string
       platform_fault_domain   = number
       sku_name                = string
-      auto_replace_on_failure = optional(bool)   # Default: true
-      license_type            = optional(string) # Default: "None"
+      auto_replace_on_failure = optional(bool)
+      license_type            = optional(string)
       tags                    = optional(map(string))
     })))
   }))
