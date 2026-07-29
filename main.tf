@@ -12,12 +12,12 @@ locals {
 }
 
 module "dedicated_host_groups" {
-  source                = "git::https://github.com/AeternaModules/azurerm_dedicated_host_group.git?ref=v4.81.0"
+  source                = "git::https://github.com/AeternaModules/azurerm_dedicated_host_group.git?ref=v5.0.0"
   dedicated_host_groups = local.dedicated_host_groups
 }
 
 module "dedicated_hosts" {
-  source          = "git::https://github.com/AeternaModules/azurerm_dedicated_host.git?ref=v4.81.0"
+  source          = "git::https://github.com/AeternaModules/azurerm_dedicated_host.git?ref=v5.0.0"
   dedicated_hosts = local.dedicated_hosts
   depends_on      = [module.dedicated_host_groups]
 }
